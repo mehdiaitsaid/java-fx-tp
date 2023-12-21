@@ -1,0 +1,24 @@
+.text14251 {
+
+    -fx-background-color: #1a3614;
+    -fx-text-fill: #00fbff;
+
+}
+
+.root {
+    -fx-background-color: rgba(0, 0, 0, 0.95);
+}
+
+
+#delete{
+    -fx-background-color: rgb(170, 0, 0);
+    -fx-text-fill: #ffffff;
+}
+#add{
+    -fx-background-color: rgb(92, 184, 92);
+    -fx-text-fill: #ffffff;
+}
+.update{
+    -fx-background-color: rgb(91, 192, 222);
+    -fx-text-fill: #ffffff;
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane  xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lst.fsts.javafxtps.IndexController"
+            prefHeight="700.0" prefWidth="700.0">
+
+    <VBox xmlns:fx="http://javafx.com/fxml" spacing="20">
+        <children>
+
+            <HBox xmlns:fx="http://javafx.com/fxml" spacing="10">
+
+                <children>
+                    <VBox>
+                        <Label text="Nom:"/>
+                        <TextField fx:id="nom" prefHeight="30" prefWidth="345"/>
+                    </VBox>
+                </children>
+
+                <children>
+                    <VBox>
+                        <Label text="Prenom:"/>
+                        <TextField fx:id="prenom" prefHeight="30" prefWidth="345"/>
+                    </VBox>
+                </children>
+
+            </HBox>
+            <HBox xmlns:fx="http://javafx.com/fxml" spacing="10">
+
+                <children>
+                    <VBox>
+                        <Label text="Email:"/>
+                        <TextField fx:id="email" prefHeight="30" prefWidth="345"/>
+                    </VBox>
+                </children>
+
+                <children>
+                    <VBox>
+                        <Label text="CNE:"/>
+                        <TextField fx:id="cne" prefHeight="30" prefWidth="345"/>
+                    </VBox>
+                </children>
+
+            </HBox>
+            <HBox xmlns:fx="http://javafx.com/fxml" spacing="10">
+
+                <padding>
+                    <Insets left="10.0"/>
+                </padding>
+                <Button fx:id="add" onAction="#addEtudiant" text="Ajouter"/>
+                <Button fx:id="update" onAction="#updateEtudiant"   styleClass="update"   visible="false" text="Modifier"/>
+                <Button fx:id="delete" onAction="#deleteEtudiant"   styleClass="update"   visible="false" text="Supprimer"/>
+
+
+            </HBox>
+
+
+        </children>
+
+        <children>
+            <VBox xmlns:fx="http://javafx.com/fxml" spacing="5">
+                <padding>
+                    <Insets left="10.0" right="10.0"/>
+                </padding>
+                <Label text="La liste d'étudiants:"/>
+                <TableView  onMouseClicked="#handleClickTableView" fx:id="etudiantsList"
+                >
+                    <columns>
+                        <TableColumn prefWidth="50.0" text="ID">
+                            <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+
+                        </TableColumn>
+
+                        <TableColumn prefWidth="150.0" text="Nom">
+                            <cellValueFactory><PropertyValueFactory property="nom"/></cellValueFactory>
+
+                        </TableColumn>
+                        <TableColumn prefWidth="150.0" text="Prénom">
+                            <cellValueFactory><PropertyValueFactory property="prenom"/></cellValueFactory>
+
+                        </TableColumn>
+                        <TableColumn prefWidth="150.0" text="Email">
+                            <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+
+                        </TableColumn>
+                        <TableColumn prefWidth="150.0" text="CNE">
+                            <cellValueFactory><PropertyValueFactory property="cne"/></cellValueFactory>
+
+                        </TableColumn>
+
+
+                    </columns>
+
+                </TableView>
+            </VBox>
+        </children>
+
+    </VBox>
+
+</AnchorPane>
